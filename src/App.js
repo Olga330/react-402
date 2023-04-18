@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { Calculator } from './apps/calculator';
 
 function hello(user) {
   if (user) {
@@ -66,6 +67,13 @@ const salaries = user.salaries.map((salary,index) => {
     <p> Sum: {a + b}</p>
 
     <p>{c}, {name} </p>
+
+   { /*<p>{Calculator()}</p>*/}
+   {/* <Calculator user={user} a={'text'} b={b}/> */}
+   <Calculator/>
+   <Calculator/>
+   <Calculator/>
+  
 
     <table>
      <thead>
