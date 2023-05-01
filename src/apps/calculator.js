@@ -1,15 +1,14 @@
-import { useState} from "react";
+import { useState } from "react";
+export function Calculator(props) {
+const [text, setText] = useState('');
 
-export function Calculator(props){
-    const [text, setText] = useState('');
-    console.log(props);
+console.log(props);
 
-    return <>
-    <p>{text}</p>
-     <input type='text' placeholder="Text" onChange={(event) => {
-        //text = event.target.value;
-        setText(event.target.value);
-     }}/>
+return <>
+<p>{text}</p>
+<input type='text' placeholder="Text" onChange={(event) => {
+setText (event.target.value);
+// text=event.target.value;
+}}/>
 </>;
-
 }
