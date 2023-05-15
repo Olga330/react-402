@@ -1,6 +1,7 @@
 import './App.css';
 import { Calculator } from './apps/calculator';
 import { User } from './apps/user'; 
+import Welcome from './apps/welcome';
 
 
 function hello(user) {
@@ -43,11 +44,14 @@ function hello(user) {
   ],
   };
   
+ // let w = new Welcome(user);
+  //console.log(w)
+
   const c=<span>Hello</span>;
   const name=hello();
   
   const salaries=user.salaries.map((salary,index)=>{
-  return <tr><td>{index+1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
+  return <tr key={index}><td>{index+1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
   });
   
   return (
@@ -62,6 +66,8 @@ function hello(user) {
   <Calculator/> 
   <Calculator/>
 
+
+<Welcome user={user} label='red'/>
 
   <User user={user}/> 
   
@@ -84,3 +90,6 @@ function hello(user) {
   }
 
 export default App;
+
+//const salaries=user.salaries.map((salary,index)=>{
+  //return <tr key={index}><td>{index+1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
