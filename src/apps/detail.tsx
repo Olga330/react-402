@@ -1,6 +1,8 @@
 import React from "react";
 import { IUser } from "./interfaces/user";
 
+
+
 interface DetailProps {
     user: IUser
 }
@@ -10,12 +12,14 @@ class Detail extends React.Component<DetailProps> {
         const {user} = this.props;
 
         return <>
-            <ul>
-                <li>Номер: {user.emp_no}</li>
-                <li>ФИО: {user.last_name} {user.first_name} </li>
-                <li>Дата рождения: {user.birth_date}</li>
-                <li>Трудоустроен: {user.hire_date}</li>
-            </ul>
+            <ol>
+                <li>Number: {user.emp_no}</li>
+                <li>Last name: {user.last_name}</li>
+                <li>Name:  {user.first_name} </li>
+                <li>Gender:  {user.gender} </li>
+                <li>Birthday: {user.birth_date}</li>
+                <li>Hire date: {user.hire_date}</li>
+            </ol>
         </>;
     }
 }
