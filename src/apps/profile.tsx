@@ -3,24 +3,6 @@ import { IUser } from "./interfaces/user";
 import Salaries from "./salaries";
 import Detail from "./detail";
 
-interface ISalary {
-    emp_no: string,
-    salary: string,
-    from_date: string,
-    to_date: string
-}
-
-interface IUser {
-    emp_no: string,
-    first_name: string,
-    last_name: string,
-    birth_date: string,
-    gender: string,
-    hire_date: string,
-    salaries: [ISalary]
-
-}
-
 interface ProfileProps {
     user: IUser
 }
